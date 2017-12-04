@@ -48,6 +48,7 @@ import ru.ptahi.iconmanager.IconManager;
 import ru.ptahi.cfe.stumile.StimuleList;
 
 
+
 /**
  * Top component which displays something.
  */
@@ -79,7 +80,7 @@ class MyPA extends PApplet{
     public float mColor;
     int mx;
     int my;
-    
+    String prj_path;
     
     PImage d, c, b, a, e;
     PImage[] im=new PImage[4];
@@ -93,20 +94,21 @@ class MyPA extends PApplet{
         this.dev = dev;
     }
     
-    
+        
     @Override
     public void setup() {
   
         size(1920, 950);
-        im[1] = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/p2.jpg");
-        im[0] = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/p1.jpg");
-        im[2] = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/p3.jpg"); 
-        im[3] = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/start.jpg"); 
-        b = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/11.png");
-        a = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/12.png");
-        c = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/13.png");
-        d = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/121.png");
-        e = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/35.png");
+        prj_path = "D:/OrlovPA/testshare/E/OrlovPA/soft/GazeInteractiveComix/";
+        im[1] = loadImage(prj_path+"data/p2.jpg");
+        im[0] = loadImage(prj_path+"data/p1.jpg");
+        im[2] = loadImage(prj_path+"data/p3.jpg"); 
+        im[3] = loadImage(prj_path+"data/start.jpg"); 
+        b = loadImage(prj_path+"data/11.png");
+        a = loadImage(prj_path+"data/12.png");
+        c = loadImage(prj_path+"data/13.png");
+        d = loadImage(prj_path+"data/121.png");
+        e = loadImage(prj_path+"data/35.png");
         
         t = 0;
         y = 0;
@@ -540,23 +542,23 @@ class MyPA extends PApplet{
             i = 0;
         }
         if (i == 0) {
-            a = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/12.png");
-            b = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/11.png");
-            c = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/13.png");
-            d = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/121.png");
+            a = loadImage(prj_path+"data/12.png");
+            b = loadImage(prj_path+"data/11.png");
+            c = loadImage(prj_path+"data/13.png");
+            d = loadImage(prj_path+"data/121.png");
         }
         if (i == 1) {
-            b = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/24.png");
-            a = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/21.png");
-            d = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/22.png");
-            c = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/23.png");
+            b = loadImage(prj_path+"data/24.png");
+            a = loadImage(prj_path+"data/21.png");
+            d = loadImage(prj_path+"data/22.png");
+            c = loadImage(prj_path+"data/23.png");
         }  // b3 a0 c2 d1
         if(i==2)   {
-            a = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/31.png");
-            b = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/32.png");
-            c = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/33.png"); 
-            d = loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/34.png");
-            e=loadImage("E:/OrlovPA/soft/GazeInteractiveComix/data/35.png");}
+            a = loadImage(prj_path+"data/31.png");
+            b = loadImage(prj_path+"data/32.png");
+            c = loadImage(prj_path+"data/33.png"); 
+            d = loadImage(prj_path+"data/34.png");
+            e=loadImage(prj_path+"data/35.png");}
         dev.sendNextTrial();
   // b3 a0 c2 d1
        }
